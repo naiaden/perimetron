@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+provider "azurerm" {
+   features {}
+}
+
 resource "azurerm_resource_group" "readings" {
   name     = "meter-values"
   location = "West Europe"
