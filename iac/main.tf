@@ -1,11 +1,11 @@
-# terraform {
-#   backend "azurerm" {
-#     resource_group_name  = "tfstate"
-#     storage_account_name = "naiadentfstate"
-#     container_name       = "tfstate"
-#     key                  = "perimetron.tfstate"
-#   }
-# }
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "tfstate"
+    storage_account_name = "naiadentfstate"
+    container_name       = "tfstate"
+    key                  = "perimetron.tfstate"
+  }
+}
 
 resource "azurerm_resource_group" "readings" {
   name     = "meter-values"
