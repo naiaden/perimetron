@@ -25,6 +25,9 @@ resource "azurerm_resource_group" "readings" {
   location = "West Europe"
 }
 
+# Shared access keys are enabled for now,
+# as only blobs and queues can use only aad auth
+# tables and files can only use keys (for now)
 resource "azurerm_storage_account" "readings" {
   name                     = "metervalues"
   resource_group_name      = azurerm_resource_group.readings.name
